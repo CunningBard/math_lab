@@ -1,0 +1,35 @@
+import math
+
+class Group:
+	def __init__(self):
+		self.data = []
+		self.q1 = 0
+		self.d1 = 0
+		self.p1 = 0
+
+	def __len__(self):
+		return len(self.data)
+
+	def calc_firsts(self):
+		self.q1 = len(self) / 4
+		self.d1 = len(self) / 10
+		self.p1 = len(self) / 100
+
+	def extend(self, data):
+		self.data += data
+		self.calc_firsts()
+		self.data.sort()
+
+	def get_q(self, quart):
+		if 0 > quart or quart > 4:
+			raise "faq no"
+
+		return round(self.q1 * quart)
+
+	def get_q_data
+
+
+
+g = Group()
+g.extend([1, 3, 2, 7])
+print(g.get_q(1))
